@@ -1,5 +1,6 @@
 import { FC, memo } from "react";
 import NavigationItem from "../../../shared/NavigationItem/ui/NavigationItem";
+import SearchBar from "../../../shared/SearchBar/ui/SearchBar";
 
 const NavigationBar: FC = () => {
     return (
@@ -10,6 +11,7 @@ const NavigationBar: FC = () => {
                 <NavigationItem description="Скиллы" destination="skills"/>
                 <NavigationItem description="Прайс" destination="price"/>
                 <NavigationItem description="Проекты" destination="projets"/>
+                <SearchBar description="Поиск..."/>
             </div>
         </>
     )
