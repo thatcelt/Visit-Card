@@ -1,5 +1,6 @@
 export interface NavigationItemProps {
-    description: string,
-    destination: string,
-    isImage?: boolean
+    description: string;
+    destination: string;
+    isImage?: boolean;
+    onClick?: () => void;
 }
