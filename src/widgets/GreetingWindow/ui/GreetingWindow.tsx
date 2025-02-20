@@ -1,5 +1,6 @@
 import { FC, memo } from "react"
 import InteractiveButton from "../../../shared/InteractiveButton/ui/InteractiveButton";
+import OctoModel from "../../OctoModel/ui/OctoModel";
 
 const GreetingWindow: FC = () => {
     return (
@@ -19,7 +20,7 @@ const GreetingWindow: FC = () => {
                         <InteractiveButton text="Узнать больше" onClick={() => {}}/>
                     </div>
                 </div>
-                <img src="src/assets/github-icon.png" className="w-125 mr-10"/>
+                <OctoModel/>
             </div>
         </>
     )
