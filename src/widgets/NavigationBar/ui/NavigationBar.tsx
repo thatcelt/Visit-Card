@@ -10,7 +10,7 @@ const NavigationBar: FC = () => {
 
     return (
         <>
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-between items-center relative z-4'>
                 <div className='flex gap-10 items-center'>
                     <NavigationItem destination="logo.png" description="logotype" isImage={true}/>
                     <NavigationItem description="Обо мне" destination="about-me"/>

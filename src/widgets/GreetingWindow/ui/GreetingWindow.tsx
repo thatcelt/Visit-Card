@@ -1,27 +1,28 @@
 import { FC, memo } from "react"
 import InteractiveButton from "../../../shared/InteractiveButton/ui/InteractiveButton";
-import OctoModel from "../../OctoModel/ui/OctoModel";
+import StarBackground from "../../StarBackground/ui/StarBackground";
 
 const GreetingWindow: FC = () => {
     return (
         <>
-            <div className='text-white flex items-center justify-between mt-15'>
-                <div>
-                    <div className='font-semibold text-5xl mb-10' style={{textShadow: '0px 4px 10px rgba(255, 255, 255, 0.25)'}}>
-                        Добро пожаловать на
-                        <p>мою страницу</p>
-                    </div>
-                    <div className="text-2xl" style={{textShadow: '0px 4px 10px rgba(255, 255, 255, 0.25)'}}>
-                        Меня зовут <a>Александр</a>, я <a>Middle-Разработчик</a>,
-                        <p>и эта страница создана в качестве сводки информации</p>
-                        <p>обо мне</p>
-                    </div>
-                    <div className="flex items-center mt-15">
-                        <InteractiveButton text="Узнать больше" onClick={() => {}}/>
+            <StarBackground>
+                <div className='text-white items-center mt-50'>
+                    <div className="text-center">
+                        <div className='font-semibold text-3xl mb-10' style={{textShadow: '0px 4px 10px rgba(255, 255, 255, 0.25)'}}>
+                            Добро пожаловать на
+                            <p>мою страницу</p>
+                        </div>
+                        <div className="text-xl" style={{textShadow: '0px 4px 10px rgba(255, 255, 255, 0.25)'}}>
+                            Меня зовут <a>Александр</a>, я <a>Middle-Разработчик</a>,
+                            <p>и эта страница создана в качестве сводки информации</p>
+                            <p>обо мне</p>
+                        </div>
+                        <div className="items-center mt-15 text-center">
+                            <InteractiveButton text="Узнать больше" onClick={() => {}}/>
+                        </div>
                     </div>
                 </div>
-                <OctoModel/>
-            </div>
+            </StarBackground>
         </>
     )
 }

@@ -4,7 +4,7 @@ import { NavigationImageProps } from "../model/types";
 const NavigationText: FC<NavigationImageProps> = ({ path, alt }) => {
     return (
         <>
-        <img src={`/${path}`} alt={alt} className='w-25 h-25 pointer-events-none'/>
+        <img src={`/${path}`} alt={alt} className='w-20 h-20 pointer-events-none'/>
         </>
     )
 }
