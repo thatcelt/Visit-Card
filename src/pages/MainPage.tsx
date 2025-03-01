@@ -4,7 +4,7 @@ import GreetingWindow from "../widgets/GreetingWindow/ui/GreetingWindow";
 const MainPage: FC = () => {
     return (
         <>
-        <div className=''>
+        <div>
             <GreetingWindow/>
         </div>
         </>

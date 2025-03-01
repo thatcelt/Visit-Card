@@ -1,4 +1,6 @@
+import { MouseEvent } from "react"
+
 export interface InteractiveButtonProps {
     text: string
-    onClick: () => void
+    onClick: (event: MouseEvent<HTMLButtonElement>) => void
 }

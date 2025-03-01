@@ -3,7 +3,7 @@ import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import { PARTICLES_BACKGROUND_OPTIONS } from "../model/constants";
-import { FC, ReactNode } from "react";
+import { FC, memo, ReactNode } from "react";
 
 const StarBackground: FC<{ children: ReactNode }> = ({ children }) => {
   return (
@@ -24,4 +24,4 @@ const StarBackground: FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-export default StarBackground;
+export default memo(StarBackground);

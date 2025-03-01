@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
+@keyframes expandCircle {
+    from {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+    }
+    to {
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+.animate-expand {
+    animation: expandCircle 0.3s ease-in-out forwards;
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
     user-select: none!important;
@@ -9,6 +28,10 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+body {
+    background-color: black;
 }
 
 :active, :hover, :focus {
