@@ -6,7 +6,7 @@ const GreetingWindow: FC = () => {
     return (
         <>
             <StarBackground>
-                <div className='text-white items-center mt-50'>
+                <div className='text-white flex items-center justify-center w-full h-screen absolute'>
                     <div className="text-center">
                         <div className='font-semibold text-3xl mb-10' style={{textShadow: '0px 4px 10px rgba(255, 255, 255, 0.25)'}}>
                             Добро пожаловать на
