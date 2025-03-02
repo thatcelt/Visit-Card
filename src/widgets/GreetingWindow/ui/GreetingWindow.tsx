@@ -50,7 +50,7 @@ const GreetingWindow: FC = () => {
                                 <InteractiveButton text="Узнать больше" onClick={(e) => {onClickSeeMore(e)}}/>
                         </motion.div>
                         {
-                            roundingCoordinates.clicked && <FillingRectangle x={roundingCoordinates.x} y={roundingCoordinates.y} color='bg-[#a0a0a0]' onContinue={() => navigate('/skills')}/>
+                            roundingCoordinates.clicked && <FillingRectangle x={roundingCoordinates.x} y={roundingCoordinates.y} color='bg-black' onContinue={() => navigate('/skills')}/>
                         }
                     </div>
                 </div>
