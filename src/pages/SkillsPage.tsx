@@ -1,11 +1,25 @@
-import { FC, memo } from "react";
+import { FC, memo, MouseEvent, useCallback, useState } from "react";
 import StarBackground from "../widgets/StarBackground/ui/StarBackground";
 import { motion } from "motion/react";
-import { TEXT_APPEARENCE_OPTIONS } from "../widgets/GreetingWindow/constants/constants";
+import { BUTTON_APPEARENCE_OPTIONS, TEXT_APPEARENCE_OPTIONS } from "../widgets/GreetingWindow/constants/constants";
 import BackButton from "../shared/BackButton/ui/BackButton";
 import SkillsBlock from "../widgets/SkillsBlock/ui/SkillsBlock";
+import InteractiveButton from "../shared/InteractiveButton/ui/InteractiveButton";
+import { useNavigate } from "react-router-dom";
+import FillingRectangle from "../shared/FillingRectangle/ui/FillingRectangle";
 
 const SkillsPage: FC = () => {
+    const [roundingCoordinates, setRoundingCoordinates] = useState({x: 0, y: 0, clicked: false});
+    const navigate = useNavigate()
+
+    const onClickSeeMore = useCallback((event: MouseEvent<HTMLButtonElement>) => {
+        setRoundingCoordinates({
+            x: event.clientX,
+            y: event.clientY,
+            clicked: true
+        })
+    }, [event])
+
     return (
         <StarBackground>
             <div className='fixed z-10 left-5 top-5'>
@@ -34,6 +48,16 @@ const SkillsPage: FC = () => {
                         >
                             <SkillsBlock/>
                     </motion.div>
+                    <motion.div
+                        initial={BUTTON_APPEARENCE_OPTIONS.initial}
+                        animate={BUTTON_APPEARENCE_OPTIONS.animate}
+                        transition={BUTTON_APPEARENCE_OPTIONS.transition}
+                        >
+                        <InteractiveButton text="Дальше" onClick={(e) => {onClickSeeMore(e)}}/>
+                    </motion.div>
+                    {
+                        roundingCoordinates.clicked && <FillingRectangle x={roundingCoordinates.x} y={roundingCoordinates.y} color='bg-black' onContinue={() => navigate('/pricing')}/>
+                    }
                 </div>
                 <motion.div
                     initial={TEXT_APPEARENCE_OPTIONS.initial}

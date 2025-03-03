@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 const MainPage = lazy(() => import('./pages/MainPage'))
 const SkillsPage = lazy(() => import('./pages/SkillsPage'))
+const PricingPage = lazy(() => import('./pages/PricingPage'))
 
 const App: FC = () => {
 
@@ -11,8 +12,9 @@ const App: FC = () => {
       <BrowserRouter>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/" element={<MainPage/>}/>
-              <Route path="/skills" element={<SkillsPage/>}/>
+              <Route path='/' element={<MainPage/>}/>
+              <Route path='/skills' element={<SkillsPage/>}/>
+              <Route path='/pricing' element={<PricingPage/>}/>
             </Routes>
           </Suspense>
       </BrowserRouter>
