@@ -7,6 +7,7 @@ export const PRICINGS: PriceEntityProps[] = [
         price: '1000',
         badges: ['Python', 'Aiogram']
     },
+    
     {
         title: 'Frontend-разработка',
         description: 'Разработка клиентской части сайта',
