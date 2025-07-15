@@ -2,6 +2,7 @@ import { FC, memo } from "react";
 import { PriceEntityProps } from "../model/types";
 import InteractiveButton from "../../../shared/InteractiveButton/ui/InteractiveButton";
 import Badge from "../../../shared/Badge/ui/Badge";
+import { TELEGRAM_LINK } from "../constants/constants";
 
 const PriceEntity: FC<PriceEntityProps> = ({ title, description, price, badges }) => {
     return (
@@ -19,7 +20,7 @@ const PriceEntity: FC<PriceEntityProps> = ({ title, description, price, badges }
                     </div>
                 </div>
                 <div className="flex items-center gap-5 px-5 pb-5">
-                    <InteractiveButton text='Заказать' onClick={() => window.open('https://t.me/thatcelt', '_blank')} />
+                    <InteractiveButton text='Заказать' onClick={() => window.open(TELEGRAM_LINK, '_blank')} />
                     {badges.map((value, index) => <Badge key={index} title={value}/>) }
                 </div>
             </div>

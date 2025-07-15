@@ -26,3 +26,5 @@ export const PRICINGS: PriceEntityProps[] = [
         badges: ['React', 'Fastify']
     }
 ]
+
+export const TELEGRAM_LINK = 'https://t.me/celt_is_god'
